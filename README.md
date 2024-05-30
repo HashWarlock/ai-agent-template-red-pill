@@ -117,6 +117,7 @@ POST RESULT: {
 ```
 
 ### Publish Your AI Agent
+
 Upload your compiled AI Agent code to IPFS.
 ```shell
 npm run publish
@@ -130,6 +131,15 @@ Upon a successful upload, the command should show the URL to access your AI Agen
 <details>
 <summary>New to thirdweb?</summary>
 We use <a href="https://thirdweb.com/dashboard/infrastructure/storage">thirdweb Storage</a> to host IPFS contents. If you are new to thirdweb, the command will guide you to create your account or login to your existing account from the browser. (You may need to forward port 8976 if you are accessing a remote console via SSH.)
+</details>
+
+<details>
+<summary>Did thirdweb fail to publish?</summary>
+If thirdweb takes too long to install or fails to publish, use the following command:
+
+```shell
+curl -F file=@./dist/index.js https://agents.phala.network/ipfs 
+```
 </details>
 
 ### Access the Published AI Agent

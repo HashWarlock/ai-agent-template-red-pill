@@ -47,7 +47,7 @@ async function test() {
         },
         secret: { openaiApiKey: process.env.OPENAI_API_KEY },
         headers: {},
-        body: JSON.stringify(sampleInput)
+        body: {}
     })
     console.log('POST RESULT:', JSON.parse(postResult))
 }
